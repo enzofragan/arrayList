@@ -201,7 +201,7 @@ int al_containsAll(ArrayList* pList,ArrayList* pList2);
  * \return int Return (-1) if Error [pList or pFunc are NULL pointer]
  *                  - (0) if ok
  */
-int al_sort(ArrayList* pList, int (*pFunc)(void* ,void*), int order);
+int al_sort(ArrayList* pList, int (*pFunc)(void* ,void*), int order);///no sabe lo que ordena, lo obtiene por medio de la funcion (*pFunc)
 
 
 

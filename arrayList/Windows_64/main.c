@@ -29,18 +29,19 @@ int main()
     {
         e1 = (Employee*) malloc(sizeof(Employee));///cargar elementos
         e1 -> id = 666;
-        strcpy(e1->name,"juan");
+        strcpy(e1->name,"luna");
         strcpy(e1->lastName,"gomez");
         e1 -> isEmpty = 1;
         e2 = (Employee*) malloc(sizeof(Employee));///cargar elementos
         e2 -> id = 777;
-        strcpy(e2->name,"luna");
+        strcpy(e2->name,"juana");
         strcpy(e2->lastName,"triger");
         e2 -> isEmpty = 2;
         al_add(lista, e1);
         al_add(lista, e2);
         intAux=al_len(lista);///mostrar cantidad de elementos
         printf("%d\n",intAux);
+        al_sort(lista,employee_compare,0);///ordenar 1=acendente 0=descendente
         for(i=0;i<2;i++)
         {
           eAux = (Employee*) al_get(lista,i);///conseguir el elemento del array

@@ -6,7 +6,16 @@
 
 int employee_compare(void* pEmployeeA,void* pEmployeeB)
 {
-    return 0;
+    int index;
+    Employee* eA;
+    Employee* eB;
+
+    eA = (Employee*) pEmployeeA;
+    eB = (Employee*) pEmployeeB;
+
+    index = strcmp(eA->name,eB->name);
+
+    return index;
 }
 
 
