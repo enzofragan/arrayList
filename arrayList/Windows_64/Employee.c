@@ -30,7 +30,20 @@ Employee* employee_new(void)
 {
 
     Employee* returnAux = NULL;
-
+    Employee* e1;
+    char aux[51];
+    e1 = (Employee*) malloc(sizeof(Employee));///cargar elementos
+    /**printf("ingrese el id: ");
+    scanf("%d",&e1->id);
+    printf("ingrese el nombre: ");
+    fflush(stdin);
+    gets(aux);*/
+    e1 -> id = 666;
+    strcpy(e1->name,"luna");
+    strcpy(e1->lastName,"gomez");
+    e1 -> isEmpty = 1;
+    ///strcpy(e1->name,aux);
+    returnAux=e1;
     return returnAux;
 
 }

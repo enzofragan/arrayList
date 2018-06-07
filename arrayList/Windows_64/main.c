@@ -19,6 +19,7 @@ int main()
 {
 
     ArrayList* lista;
+    FILE* pArray;
     int intAux;
     int i;
     lista=al_newArrayList();
@@ -28,10 +29,7 @@ int main()
     if(e1!=NULL)
     {
         e1 = (Employee*) malloc(sizeof(Employee));///cargar elementos
-        e1 -> id = 666;
-        strcpy(e1->name,"luna");
-        strcpy(e1->lastName,"gomez");
-        e1 -> isEmpty = 1;
+        e1 = employee_new();
         e2 = (Employee*) malloc(sizeof(Employee));///cargar elementos
         e2 -> id = 777;
         strcpy(e2->name,"juana");
@@ -47,6 +45,7 @@ int main()
           eAux = (Employee*) al_get(lista,i);///conseguir el elemento del array
           employee_print(eAux);///mostrar valores de elemento
         }
+        parserEmployee(pArray,lista);
     }
     return 0;
 }
